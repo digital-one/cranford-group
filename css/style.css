@@ -3490,17 +3490,51 @@ body {
   position: absolute;
 }
 
-/* line 19, ../sass/components/_icons.scss */
+/* line 18, ../sass/components/_icons.scss */
+.icon-arrow-up, .icon-arrow-down {
+  position: fixed;
+  top: 140px;
+  left: 50%;
+  width: 50px;
+  margin-left: -25px;
+  height: 50px;
+  text-align: center;
+  -webkit-transition: opacity 0.3s ease;
+  -moz-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
+  line-height: 50px;
+  background-color: transparent;
+  z-index: 9999;
+  opacity: 0.5;
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+/* line 31, ../sass/components/_icons.scss */
+.icon-arrow-up:hover, .icon-arrow-up:active, .icon-arrow-down:hover, .icon-arrow-down:active {
+  opacity: 1;
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+/* line 35, ../sass/components/_icons.scss */
+.icon-arrow-down {
+  top: auto;
+  bottom: 20px;
+}
+
+/* line 39, ../sass/components/_icons.scss */
 .icon-arrow-down:before {
   content: "\e600";
 }
 
-/* line 22, ../sass/components/_icons.scss */
+/* line 42, ../sass/components/_icons.scss */
 .icon-arrow-up:before {
   content: "\e601";
 }
 
-/* line 25, ../sass/components/_icons.scss */
+/* line 45, ../sass/components/_icons.scss */
 .icon-info-icon:before {
   content: "\e602";
   color: #afafaf;
@@ -3508,7 +3542,7 @@ body {
   font-size: 2.0625rem;
 }
 
-/* line 30, ../sass/components/_icons.scss */
+/* line 50, ../sass/components/_icons.scss */
 .icon-info-icon {
   top: 50%;
   right: 40px;
@@ -3518,22 +3552,22 @@ body {
   margin-top: -16px;
   z-index: 999;
 }
-/* line 35, ../sass/components/_icons.scss */
+/* line 55, ../sass/components/_icons.scss */
 .icon-info-icon:hover:before, .icon-info-icon:active:before {
   color: #969696;
 }
 
-/* line 40, ../sass/components/_icons.scss */
+/* line 60, ../sass/components/_icons.scss */
 .icon-facebook:before {
   content: "\ea8c";
 }
 
-/* line 43, ../sass/components/_icons.scss */
+/* line 63, ../sass/components/_icons.scss */
 .icon-twitter:before {
   content: "\ea91";
 }
 
-/* line 46, ../sass/components/_icons.scss */
+/* line 66, ../sass/components/_icons.scss */
 .icon-linkedin2:before {
   content: "\eac9";
 }

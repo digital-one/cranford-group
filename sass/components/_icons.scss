@@ -15,7 +15,27 @@
 		@include abs-pos(0,auto,auto,-500px);
 	}
 }
-
+.icon-arrow-up, .icon-arrow-down{
+	position: fixed;
+	top: 140px;
+	left: 50%;
+	width:50px;
+	margin-left: -25px;
+	height:50px;
+	text-align:center;
+	@include transition(opacity .3s ease);
+	line-height:50px;
+	background-color: transparent;
+	z-index: 9999;
+	@include opacity(.5);
+	&:hover,&:active{
+		@include opacity(1);
+	}
+}
+.icon-arrow-down{
+	top:auto;
+	bottom: 20px;
+}
 .icon-arrow-down:before {
 	content: "\e600";
 }

@@ -82,6 +82,18 @@ var _header_height,
 	_parallax_move_blue = -(_window_scroll/1.2);
 
 
+$('.arrow').on('click',function(e){
+	e.preventDefault();
+	var _animationSpeed = 500,
+		_target = $(this).attr('href');
+		//_target = '0';
+	 $.scrollTo( _target, _animationSpeed, {
+          easing: 'easeInOutExpo',
+          offset: 0
+        });
+})
+
+
 
 refresh_vars = function(){
 
