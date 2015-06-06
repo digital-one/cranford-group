@@ -86,6 +86,9 @@ $('.arrow').on('click',function(e){
 	e.preventDefault();
 	var _animationSpeed = 500,
 		_target = $(this).attr('href');
+		if(_target=="#solutions"){
+			_target=0;
+	}
 		//_target = '0';
 	 $.scrollTo( _target, _animationSpeed, {
           easing: 'easeInOutExpo',
