@@ -1,0 +1,13 @@
+	@mixin bg-cover($fixed:false,$position:top center){
+		background-position: $position;
+		@if $fixed == true{
+		 background-attachment: fixed;
+		}
+		background-repeat: no-repeat;
+	    -webkit-background-size: cover;
+	    -moz-background-size: cover;
+	    -o-background-size: cover;
+	    background-size: cover;
+	}
+
+

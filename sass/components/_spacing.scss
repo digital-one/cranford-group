@@ -1,0 +1,14 @@
+$spacing: 54px;
+$half-spacing: 36px;
+	@media #{$large-up} {
+		$spacing:54px;
+		$half-spacing: 27px;
+	}
+	@media #{$medium-up} {
+		$spacing:54px;
+		$half-spacing: 27px;
+	}
+	@media #{$small-up} {
+		$spacing:54px;
+		$half-spacing: 27px;
+	}

@@ -1,0 +1,11 @@
+@mixin font-header{
+	font-family: $bebas;
+	font-weight: 700;
+	line-height: normal;
+}
+
+@mixin font-body{
+	font-family: $merriweather;
+	font-weight: 400;
+	line-height: normal;
+}

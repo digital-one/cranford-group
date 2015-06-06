@@ -1,0 +1,23 @@
+h1,h2{
+	font-family: $proxima-nova;
+	@include font-size(40px);
+	margin: 0 0 30px;
+	line-height:100%;
+	color: white;
+	font-weight:normal;
+}
+a{
+	&:link,&:visited{
+		text-decoration: none;
+		color: white;
+	}
+}
+p{
+	margin: 0 0 25px;
+	&:last-child{
+		margin-bottom: 0
+	}
+}
+strong{
+	font-family: $proxima-nova-bold;
+}

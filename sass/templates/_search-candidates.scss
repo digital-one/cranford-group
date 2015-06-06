@@ -1,0 +1,22 @@
+#search-form{
+	padding-bottom:50px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid $grey;
+}
+
+@media #{$medium-up} { 
+
+	#search-results{
+		li{
+			footer{
+				text-align: right;
+				a{
+					margin-left:20px;
+					margin-bottom:0;
+				}
+			}
+		}
+
+	}
+
+}

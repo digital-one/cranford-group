@@ -1,0 +1,20 @@
+#header{
+	background-color: white;
+	height: 120px;
+	display: block;
+	position: fixed;
+	z-index:999;
+	width:100%;
+	top:0;
+	left:0;
+	padding: 26px 0;
+	text-align:center;
+}
+#home-link{
+	width:296px;
+	height:68px;
+	background:url('../images/cranford-group.svg') left top no-repeat;
+	background-size: 100% auto;
+	@extend %ir;
+	margin: 0 auto;  
+}

@@ -1,0 +1,39 @@
+.popup{
+	display: none;
+	width:90%;
+	background-color: rgba(0,0,0,.8);
+	@include abs-pos(0,auto,auto,0);
+	padding:15px;
+	border-top:4px solid $orange;
+	z-index:999;
+	p,.gform_description,.gform_confirmation_message{
+		@include font-size(16px);
+		color: white;
+		text-align: center;
+		margin-bottom: 25px;
+		display: block;
+	}
+	a.close{
+		background-color: $orange;
+		color: black;
+		display: inline-block;
+		font-weight: 700;
+		text-transform: uppercase;
+		@include font-size(12px);
+		padding:5px;
+		@include abs-pos(0,15px,auto,auto);
+
+	}
+}
+
+@media #{$medium-up} { 
+
+	.popup{
+		width:40%;
+		padding:50px 30px 30px;
+		a.close{
+			@include abs-pos(0,30px,auto,auto);
+		}
+	}
+	
+}

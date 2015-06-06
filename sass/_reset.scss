@@ -1,0 +1,7 @@
+figure,ul,li,p,blockquote,menu{
+	@extend %reset-spacing;
+}
+ul{
+	list-style-type:none;
+}
+button:focus,a:focus {outline:0;}

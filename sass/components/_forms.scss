@@ -1,0 +1,554 @@
+/* ========================= Default Field Styling =========================  */ 
+
+input[type="text"], 
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="search"],
+select,
+textarea,
+.selectBox-dropdown{
+	-webkit-appearance: none;
+ 	-moz-appearance: none;
+  	border-radius: 0;
+  	background-color: $light-grey;
+  	border-style: solid;
+  	border:none;
+  	position: relative;
+  	border:1px solid $vgl-blue;
+  	//box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  	//color: rgba(0, 0, 0, 0.75);
+  	display: block;
+  	@include font-size(14px);
+  	height: 40px;
+  	padding: 5px 10px;
+  	line-height: 1;
+  	width: 100% !important;
+  	color: $grey;
+  	box-sizing: border-box;
+	@include transition (background-color .1s linear 0s);
+	font-family:$helvetica;
+	font-weight: 700;
+	@include placeholder {
+    	color: $grey; 
+    	position: relative;
+    	&:after{
+    		.gfield_contains_required &, .required &{
+				content:"*";
+				@include abs-pos(0,0,auto,auto);
+				z-index: 9999;
+				display: block;
+			}
+		}
+  	}
+	&:focus, .gfield_error &{
+		background-color: darken($light-grey,5%);
+		outline:none;
+		color: $grey;
+		@include placeholder {
+			color: $grey;
+		}
+	}
+}
+
+textarea{
+	padding: 10px;
+	height: 150px;
+	resize: none;
+}
+button{
+	background-color: $grey;
+	border:none;
+	color: white;
+	height:30px;
+	line-height:1;
+	text-align:center;
+	@include font-size(12px);
+}
+
+
+/* ========================= Gravity Forms =========================  */
+
+.gform_wrapper{
+}
+.gform_body{
+	ul{
+		margin-bottom: 0;
+		li.gfield{
+			margin-bottom: 10px;
+			@extend %clearfix;
+			div.half{
+				width:100%;
+				float: none;
+				margin-bottom: 10px;
+				&:last-child{
+					float: right;
+				}
+
+			}
+		}
+	}
+}
+.gfield_label{
+	@include font-size(14px);
+	font-weight:700;
+	color: $vgl-blue;
+	margin-bottom: 10px;
+	display: block;
+	.gfield_required{ 
+
+	}
+	.left_label &{
+		float:left;
+		width:20%;
+		height:30px;
+		line-height: 30px;
+	}
+	.no-label &{
+		display: none;
+	}
+}
+.gfield_checkbox{
+	label{
+		color: $vgl-blue;
+		font-weight: 700;
+	}
+	li{
+		margin-bottom: 10px;
+	}
+}
+.ginput_complex{
+	label{
+		display: none;
+	}
+}
+.ginput_container{
+	display: block;
+	position: relative;
+	.left_label &{
+		float: left;
+		width: 80%;
+	}
+	.gfield_contains_required &{
+		
+	}
+}
+.recaptchatable #recaptcha_response_field{
+	height: 30px;
+	font-size:12px !important;
+	border-color: #ccc !important;
+}
+.recaptchatable #recaptcha_image{
+	overflow: hidden !important;
+}
+.recaptchatable a{
+	font-size:12px !important;
+	color: $grey !important;
+}
+.gform_footer{
+	padding: 10px 0 0;
+	display: block;
+	width: 100%;
+	position: relative;
+	@extend .clearfix;
+	button{
+		//margin-right: 20px;
+		//margin-bottom: 20px;
+	}
+}
+.gsection{
+	margin-top: 20px;
+	h2{
+		margin-bottom: 0;
+	}
+}
+.gfield_description{
+	display: block;
+	width: 100%;
+	@include font-size(12px);
+	text-transform: none;
+	margin-top: 4px;
+	color: $vgl-blue;
+}
+/*
+.validation_error,.validation_message{
+	@include font-size(14px);
+	color: white;
+	font-weight: 700;
+	background-color: $grey;
+	padding: 8px 8px 10px;
+	display: inline-block;
+	margin-bottom: 10px;
+	width:auto;
+}	
+*/
+.validation_message{
+	display: block;
+	color: red;
+	@include font-size(12px);
+	font-weight:700;
+}
+.validation_error{
+	display: none;
+	margin-bottom:10px;
+	#notification-panel &{
+		display: block; 
+	}
+}
+.gform_ajax_spinner{
+	@include abs-pos(0,auto,auto,0);
+	width:40px;
+	height:40px;
+}	
+.gform_confirmation_message{
+
+}
+.ca-field{
+	display: none;
+}
+
+/* ========================= Select2 =========================  */
+
+
+.select2-container{
+	width:100% !important;
+	.select2-selection--single{
+		background-color: $light-grey;
+		height:40px;
+		@include border-radius(0);
+	}
+	.select2-search--inline{
+		.select2-search__field{
+			margin: 0;
+			padding: 0 10px;
+			height:38px;
+		}
+	}
+}
+.select2-container--default{
+	.select2-selection--single{
+		border-color: $vgl-blue;
+		.select2-selection__rendered{
+			height:40px;
+			line-height: 37px;
+			color: $vgl-blue;
+			font-weight: 700;
+		}
+		.select2-selection__placeholder{
+			color: $vgl-blue;
+			font-weight: 700;
+		}
+		.select2-selection__arrow{
+			height:40px;
+			width:30px;
+			b{
+				border-color: $vgl-blue transparent transparent transparent;
+			//border-color: $vgl-blue;
+			}
+		}
+	}
+	&.select2-container--open {
+		 .select2-selection--single{
+		 	background-color: darken($light-grey,5%);
+		 	.select2-selection__arrow{
+		 		b{
+		 			border-color: transparent transparent $vgl-blue transparent;
+		 		}
+		 	}
+		 }
+	}
+	.select2-selection--multiple{
+		background-color: $light-grey;
+  		border: 1px solid $vgl-blue;
+  		padding: 0 5px;
+  		@include border-radius(0);
+  		.select2-selection__rendered{
+  			display: block;
+  			padding:0;
+  		}
+	}
+}
+
+
+.select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple
+
+
+/* ========================= Selectbox JS =========================  */
+
+.selectBox-dropdown{
+	position: relative;
+	cursor: pointer;
+	padding:0;
+	&:hover, &:active, &:focus{
+		background-color: darken($light-grey,5%);
+	}
+	&.selectBox-menuShowing{
+    	background-color: darken($light-grey,5%);
+    }
+    &.selectBox-menuShowing-bottom{
+
+    }
+    &.selectBox-menuShowing-top{
+    	
+    }
+	.selectBox-label{
+		height: 40px;
+		line-height: 27px;
+		@include font-size(14px);
+		padding: 5px 10px;
+		display: block;
+		color: $grey;
+		width:100% !important;
+	}
+	.selectBox-arrow{
+		height: 40px;
+    	width: 40px;
+    	@include abs-pos(0,0,auto,auto);
+    	display: block;
+    	&:after{
+    		content:"";
+    		width: 16px;
+    		height: 8px;
+    		display: block;
+    		background-image:url('../images/selectbox-arrow.png');
+    		background-position: left top;
+    		background-repeat: no-repeat;
+    		background-size: auto 100%;
+    		@include abs-pos(50%,auto,auto,50%);
+    		margin: -4px 0 0 -8px;
+    		.svg &{
+    			background-image:url('../images/selectbox-arrow.svg');	
+    		}
+    	}	
+	}
+	&.selectBox-active, .gfield_error &{
+    	background-color: darken($light-grey,5%);
+    	.selectBox-arrow{
+    		
+    	}
+    }
+}
+.selectBox-dropdown-menu {
+    position: absolute;
+    z-index: 99999;
+    max-height: 200px;
+    min-height: 1em;
+    background: white !important;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    @include box-shadow(0 2px 6px rgba(0, 0, 0, .2));
+	&.selectBox-options{
+		li,a{
+			list-style: none;
+    		display: block;
+    		cursor: default;
+    		padding: 0;
+    		margin: 0;
+			text-align:left;
+		}
+		li{
+			&.selectBox-hover a {
+    			background-color: $light-grey;
+    			color: $grey;
+    		}
+    		&.selectBox-selected a{
+    			//background-color: $green;
+    		}
+		}
+		a{
+			@include font-size(14px);
+			padding: 4px 10px;
+		}
+		&.selectBox-options-top{
+    		border-bottom:none;
+			margin-top:1px;
+		}
+		&.selectBox-options-bottom{
+
+		}
+		&.selectBox-optgroup {
+    		color: #666;
+    		background: #EEE;
+    		font-weight: bold;
+    		line-height: 1.5;
+    		padding: 0 .3em;
+    		white-space: nowrap;
+		}
+	}
+}
+.selectBox-inline { 
+    min-width: 150px;
+    outline: none;
+    border: solid 1px #BBB;
+    background: #FFF;
+    display: inline-block;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    overflow: auto;
+}
+
+/* ========================= File Field Replacement =========================  */
+
+.file-select-wrap{
+	display: block;
+	width:100%;
+	height:40px;
+	overflow:hidden;
+	position:relative;
+	input[type="file"]{
+		width:5000px;
+		height:100%;
+		display: block;
+		@include opacity(.2);
+		z-index: 2;
+		cursor: pointer;
+		@include abs-pos(0,auto,auto,-500px);
+	}
+	.file-select{
+		position:relative;
+		width:100%;
+		height:100%;
+		display: block;
+		background-color: $light-grey;
+		border:1px solid $vgl-blue;
+		z-index:1;
+		cursor: pointer;
+		@extend .clearfix;
+		.value{
+			display: block;
+			height: 40px;
+			width:80%;
+			line-height: 37px;
+			padding: 0 10px;
+			float:left;
+			color: $vgl-blue;
+			font-weight: 700;
+		}
+		.button{
+			float:right;
+			width:20%;
+			height:40px;
+			display: block;
+			background-color:$vgl-blue;
+			line-height: 37px;
+			text-align: center;
+			color: white;
+			font-weight: 700;
+		}
+	}
+}
+
+
+/* ========================= Checkbox Replacement =========================  */
+
+.replace-checkbox{
+	.checkbox{
+		width: 40px;
+		height: 40px;
+		text-align: center;
+		cursor: pointer;
+		display: block;
+		background-color: $light-grey;
+		border:1px solid $vgl-blue;
+		margin-right:10px;
+		float: left;
+		&.checked{
+			&:before{
+				font-family: FontAwesome;
+				content:"\f00c";
+				width:40px;
+				height:40px;
+				line-height: 40px;
+				@include font-size(20px);
+				color: $vgl-blue;
+			}
+		}
+	}
+	label{
+		height:40px;
+		line-height: 40px;
+		cursor: pointer;
+	}
+	input[type="checkbox"]{
+		display: none;
+	}
+}
+.replace-radio{
+	.radio{
+		width: 30px;
+		height: 30px;
+		text-align:center;
+		cursor:pointer;
+		display: block;
+		background-color: $light-grey;
+		border:1px solid $vgl-blue;
+		margin-right:10px;
+		@include border-radius(50%);
+		float: left;
+		margin: 5px 10px 5px 0;
+		&.checked{
+			&:before{
+				font-family: FontAwesome;
+				content:"\f111";
+				width:30px;
+				height:30px;
+				line-height: 28px;
+				@include font-size(12px);
+				color: $vgl-blue;
+			}
+		}
+	}
+	label{
+		height:40px;
+		line-height: 40px;
+		display: inline-block;
+		cursor: pointer;
+		font-weight: 700;
+	}
+	input[type="radio"]{
+		display: none;
+	}
+}
+
+
+/* ========================= Media Queries =========================  */
+
+@media #{$small-up} { 
+	
+	.gform_body{
+		ul{
+			margin-bottom: 0;
+			li.gfield{
+				margin-bottom: 20px;
+				div.half{
+					width:48%;
+					float: left;
+					&:last-child{
+						float: right;
+					}
+
+				}
+			}
+		}
+	}
+	.gform_footer{
+		input,button{
+			float: right;
+		}
+		a{
+			float: left;
+			margin:0;
+		}
+	}
+}
+@media #{$medium-up} { 
+
+	.gfield_checkbox{
+		li{
+			margin-bottom: 0;
+		}
+	}
+
+}

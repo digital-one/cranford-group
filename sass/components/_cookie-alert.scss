@@ -1,0 +1,48 @@
+#cookie-alert{
+	background-color: rgba(0,0,0,.4);
+	padding:15px 0;
+	@extend .clearfix;
+	display:none;
+	color: white;
+	border-bottom:1px solid black;
+	@include font-size(14px);
+	aside{
+		text-align: left;
+		padding-top:10px;
+	}
+	a{
+		background-color:$orange;
+		display: inline-block;
+		color: black;
+		font-weight: 700;
+		text-transform: uppercase;
+		line-height: 100%;
+		padding:8px;
+		margin: 0 8px 0 0;
+		&:hover,&:active{
+			background-color: darken($orange,10%);
+		}
+		&.accept{
+			background-color: white;
+			&:hover,&:active{
+				background-color: darken($xlight-grey,10%);
+			}
+		}
+	}
+}
+
+
+@media #{$large-up} { 
+
+	#cookie-alert{
+		aside{
+			text-align: right;
+			padding-top:5px;
+		}
+		a{
+			margin: 0 0 0 8px;
+		}
+	}
+
+
+}

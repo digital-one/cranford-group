@@ -1,0 +1,128 @@
+#mask{
+	position: relative;
+	width:100%;
+	overflow:hidden;
+}
+#solutions,#executive,#intro{
+	z-index: 3;
+	position:absolute;
+	@include transition(all .3s ease);
+	left:0;
+	width:100%;
+	display: block; 
+}
+#solutions,#executive{
+	footer{
+		padding: 15px 0 0;
+		p{
+			margin-bottom: 40px;
+			&:last-child{
+				padding-bottom:0;
+			}
+		}
+	}
+}
+#intro{
+	text-align:center;
+	@include font-size(40px);
+	line-height: 120%;
+	@include abs-pos(0,auto,auto,0);
+}
+#executive{
+	text-align:right;
+}
+menu.social{
+	@include inline-menu;
+	#executive &{
+		float: right;
+	}
+	li{
+		padding: 0 10px 0 0;
+		#executive &{
+			padding: 0 0 0 10px;
+		}
+	}
+	a{
+		@include font-size(25px);
+		@include transition(color .3s ease);
+		&:link,&:visited{
+			color: darken($red,20%);
+			#executive &{
+				color: darken($blue,20%);
+			}
+		}	
+		&:hover,&:active{
+			color: white;
+			#executive &{
+				color: white;
+			}
+		}
+	}
+
+}
+.curve{
+	position:absolute;
+	left:0;
+	z-index:1;
+	display: block;
+	@include transition(all .1s ease);
+	width:100%;
+	height:100%;
+	background-image:url('../images/red-curve.svg');
+	background-position:0 0;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	z-index: 2;
+	&.blue{
+		background-image:url('../images/blue-curve.svg');
+		z-index: 1;
+	}
+}
+
+@media #{$xsmall-only} { 
+	
+}
+@media #{$small-only} { 
+	
+}
+
+/* Media Queries */
+
+@media #{$small-up} { 
+
+	
+
+}
+
+@media #{$medium-up} { 
+
+	
+
+}
+
+@media #{$large-up} { 
+
+	.curve{
+		background-position:  0 -700px;
+	}
+	
+	
+}
+
+@media #{$xlarge-up} { 
+
+	.curve{
+		background-position:  0 -900px;
+	}
+	
+	
+}
+
+@media #{$xxlarge-up} { 
+
+	.curve{
+		background-position:  0 -1100px;
+	}
+	
+	
+}

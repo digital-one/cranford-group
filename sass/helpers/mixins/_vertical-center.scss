@@ -1,0 +1,17 @@
+@mixin vertical-center{
+	height:100%;
+	&:before{
+		content:"";
+		height:100%;
+		display: inline-block;
+		vertical-align: middle;
+		text-align: center; 
+	}
+	.vcenter{
+		display: inline-block;
+		text-align: left;
+		width:98%;
+		margin:0 auto;
+		vertical-align: middle;
+	}
+}

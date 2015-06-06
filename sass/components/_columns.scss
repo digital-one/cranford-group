@@ -1,0 +1,127 @@
+@media #{$xsmall-only} { 
+	.xsmall-1{
+	  @include grid-column(
+	    $columns:1
+	  );
+	}
+	.xsmall-2{
+	  @include grid-column(
+	    $columns:2
+	  );
+	}
+	.xsmall-3{
+	  @include grid-column(
+	    $columns:3
+	  );
+	}
+	.xsmall-4{
+	  @include grid-column(
+	    $columns:4
+	  );
+	}
+	.xsmall-5{
+	  @include grid-column(
+	    $columns:5
+	  );
+	}
+	.xsmall-6{
+	  @include grid-column(
+	    $columns:6
+	  );
+	}
+	.xsmall-7{
+	  @include grid-column(
+	    $columns:7
+	  );
+	}
+	.xsmall-8{
+	  @include grid-column(
+	    $columns:8
+	  );
+	}
+	.xsmall-9{
+	  @include grid-column(
+	    $columns:9
+	  );
+	}
+	.xsmall-10{
+	  @include grid-column(
+	    $columns:10
+	  );
+	}
+	.xsmall-11{
+	  @include grid-column(
+	    $columns:11
+	  );
+	}
+	.xsmall-12{
+	  @include grid-column(
+	    $columns:12
+	  );
+	}
+	.xsmall-offset-1{
+		@include grid-column(
+	    $offset:1
+	  );
+	}
+	
+}
+
+@media #{$xlarge-only} { 
+	.xlarge-3{
+	  @include grid-column(
+	    $columns:3
+	  );
+	}
+	.xlarge-4{
+	  @include grid-column(
+	    $columns:4
+	  );
+	}
+	.xlarge-5{
+	  @include grid-column(
+	    $columns:5
+	  );
+	}
+	.xlarge-6{
+	  @include grid-column(
+	    $columns:6
+	  );
+	}
+	.xlarge-7{
+	  @include grid-column(
+	    $columns:7
+	  );
+	}
+	.xlarge-8{
+	  @include grid-column(
+	    $columns:8
+	  );
+	}
+	.xlarge-9{
+	  @include grid-column(
+	    $columns:9
+	  );
+	}
+	.xlarge-10{
+	  @include grid-column(
+	    $columns:10
+	  );
+	}
+	.xlarge-11{
+	  @include grid-column(
+	    $columns:11
+	  );
+	}
+	.xlarge-12{
+	  @include grid-column(
+	    $columns:12
+	  );
+	}
+	.xlarge-offset-1{
+		@include grid-column(
+	    $offset:1
+	  );
+	}
+	
+}

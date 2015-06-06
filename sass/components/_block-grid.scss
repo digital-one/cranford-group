@@ -1,0 +1,39 @@
+.xsmall-block-grid-1 {
+    @include block-grid(
+        $base-style: false,
+         $per-row: 1
+        );
+}
+.xsmall-block-grid-2 {
+   @include block-grid(2);
+}
+.xsmall-block-grid-3 {
+   @include block-grid(3);
+}
+.xsmall-block-grid-4 {
+ @include block-grid(4);
+}
+.xsmall-block-grid-5 {
+  @include block-grid(5);
+}
+.xsmall-block-grid-6 {
+  @include block-grid(6);
+}
+.xsmall-block-grid-7 {
+  @include block-grid(7);
+}
+.xsmall-block-grid-8 {
+  @include block-grid(8);
+}
+.xsmall-block-grid-9 {
+  @include block-grid(9);
+}
+.xsmall-block-grid-10 {
+  @include block-grid(10);
+}
+.xsmall-block-grid-11 {
+    @include block-grid(11);
+}
+.xsmall-block-grid-12 {
+    @include block-grid(12);
+}

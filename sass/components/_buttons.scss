@@ -1,0 +1,14 @@
+a.button{
+	display:inline-block;
+	height:43px;
+	line-height:43px;
+	background-color:white;
+	text-align:center;
+	color: $blue;
+	padding: 0 40px;
+	font-family: $proxima-nova-bold;
+	border-radius: 22px/50%;
+	#solutions &{
+		color: $red;
+	}
+}

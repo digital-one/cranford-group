@@ -1,0 +1,139 @@
+#nav{
+	@include inline-menu;
+	@extend %full-width;
+	@extend .clearfix;
+	margin-bottom:-15px;
+	z-index:999;
+	display: none;
+	position:fixed;
+	left:0;
+	background-color: $vgl-blue;
+	top:0;
+	height:100%;
+	ul{
+		@extend %full-width;
+		@extend .clearfix;
+	}
+	li{
+		width: 100%;
+		position: relative;
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	a{
+		display: block;
+		width:100%;
+		text-align: center;
+		font-weight: 700;
+		height:30px;
+		line-height: 30px;
+		background-color: transparent;
+		text-decoration:none;
+		@include font-size(25px);
+		color: white;
+		&:link,&:visited{
+			text-decoration:none;
+			color: white;
+		}
+		&:hover,&:active{
+			color: darken(white,20%);
+		}
+	}
+	.home-link{
+		margin: 74px auto 50px;
+		display: inline-block;
+		background-color: transparent;
+		width:100%;
+		background-size: auto 100%;
+		background-image:url('../images/vgl-logo-wo-mobile.png');
+		.svg &{
+			background-image:url('../images/vgl-logo-wo-mobile.svg');
+		}
+		background-position: center center;
+	}
+}
+.menu-toggle{
+	display: block;
+	position: fixed;
+	right:0;
+	top:0;
+	width:60px;
+	height:60px;
+	@include border-radius(8px);
+	cursor:pointer;
+	&:before{
+		content:"";
+		display: block;
+		width:40px;
+		height:25px;
+		background-image:url('../images/icon-hamburger.png');
+		background-size:auto 100%;
+		background-position:left top;
+		@include abs-pos(17px,auto,auto,10px);
+		.svg &{
+			background-image:url('../images/icon-hamburger.svg');
+		}
+	}
+	&.active{
+		&:before{
+			background-position: right top;
+		}
+	}
+	background-position: center center;
+	background-color: $vgl-blue;
+	background-repeat: no-repeat;
+	@extend %ir;
+	z-index:9999;
+}
+
+/* Media Queries */
+
+@media #{$medium-up} { 
+
+	#nav{
+		display: block !important;
+		position: relative;
+		top:auto;
+		left:auto;
+		background-color: white;
+		li{
+			width: 20%;
+			position: relative;
+			height:30px;
+			margin-bottom: 0;
+			&:after{
+				content:"";
+				@include abs-pos(50%,0,auto,auto);
+				width:1px;
+				height:14px;
+				display: block;
+				background-color: $vgl-blue;
+				margin-top: -7px;
+			}
+			&:last-child{
+				&:after{
+					display: none;
+				}
+			}
+		}
+		a{
+			@include font-size(14px);
+			background-color: white;
+			color: $vgl-blue;
+			&:link,&:visited{
+				text-decoration:none;
+				color: $vgl-blue;
+			}
+			&:hover,&:active{
+				color: $secondary;
+			}
+		}
+		.home-link{
+			display: none;
+		}
+	}
+	.menu-toggle{
+		display: none;
+	}
+
+}

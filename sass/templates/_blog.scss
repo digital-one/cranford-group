@@ -1,0 +1,23 @@
+#archive-form{
+	li{
+		margin-bottom:10px;
+	}
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+	border-bottom: 1px solid $grey;
+}
+
+
+/* Media Queries */
+
+@media #{$medium-up} { 
+
+	#archive-form{
+		li{
+			margin-bottom:0;
+		}
+	}
+
+}
+
+
