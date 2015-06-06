@@ -76,8 +76,10 @@ var _header_height,
 	_red_curve =  $('.curve.red');
 	_blue_curve = $('.curve.blue'),
 	_parallax_offset = 0,
+	_parallax_offset_blue = 0,
 	_window_scroll = $(window).scrollTop(),
-	_parallax_move = -(_window_scroll/2);
+	_parallax_move = -(_window_scroll/2),
+	_parallax_move_blue = -(_window_scroll/1.2);
 
 
 
@@ -90,13 +92,14 @@ refresh_vars = function(){
 	_center = _mask_height/2,
 	_offset = (_window_height/100)*10,
 	_intro_height = $('#intro').outerHeight(),
+	_top= (_window_height/100)*15,
 	_bottom = (_window_height/100)*25,
 	_start_scroll = _window_height + _header_height,
 	_scroll_offset = _start_scroll/3,
 	_curve_red_pct_scale = (_window_width/382) * 100;
 	_curve_red_height = (592/100)* _curve_red_pct_scale,
 	_curve_red_top = (_window_height*2) - _curve_red_height,
-	_curve_blue_top = _mask_height - 200,
+	_curve_blue_top = _window_height*2 +_offset,
 	_current_curve_width = $('.curve.red').width(),
 	_current_curve_height = $('.curve.red').height(),
 	_current_blue_curve_width = $('.curve.blue').width(),
@@ -115,19 +118,21 @@ refresh_vars = function(){
 	_parallax_red_curve_pos = 0,
 	_window_scroll = $(window).scrollTop(),
 	_parallax_move = -(_window_scroll/2),
+	_parallax_move_blue = -(_window_scroll/1.2),
 	_parallax_offset = 0;
 }
 
 parallax_curve = function(){
 _window_scroll = $(window).scrollTop(); //get the scroll position
 _parallax_move = -(_window_scroll/2); //set the default parallax scroll position
+_parallax_move_blue = -(_window_scroll/1.2);
 _next_move = (_parallax_move + _parallax_offset); //set the next positon with offset
-_window_scroll_blue = $(window).scrollTop();
+_next_move_blue = (_parallax_move_blue + _parallax_offset_blue);
 _red_curve.css({
    'background-position' : '0 '+ _next_move +"px"//,
   });
 _blue_curve.css({
-   'background-position' : '0 '+(_window_scroll_blue/2)+"px"//,
+   'background-position' : '0 '+ _next_move_blue +"px"//,
   });
 }
 
@@ -183,12 +188,16 @@ move_to_center = function(){
 	_req_pos = _curve_red_top;
 	_req_blue_pos = _curve_blue_top;
 	_parallax_offset = (_req_pos - 	_parallax_move);
+	_parallax_offset_blue = (_req_blue_pos - _parallax_move_blue);
 	//console.log('parallax offset='+_parallax_offset);
 	//console.log('with offset='+ (_parallax_move + _parallax_offset));
 	//console.log('current_pos='+_req_pos);
 	//console.log('next_parrallax='+_parallax_move);
 _red_curve.css({
    'background-position' : '0 '+ _req_pos +"px"//,
+  });
+_blue_curve.css({
+   'background-position' : '0 '+ _req_blue_pos +"px"//,
   });
 start_parallax();
      	$('#main').animate({
