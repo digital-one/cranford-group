@@ -164,7 +164,15 @@ if(!isTouchDevice.any()){
  
 
 }
-
+reset_layout = function(){
+	$('#mask').css({
+		height: 'auto'
+	})
+	$('#intro,#solutions,#executive').css({
+		top:'auto',
+		bottom: 'auto'
+	})
+}
 refresh_layout = function(){
 	if(!_is_mobile){
 	refresh_vars();
@@ -236,11 +244,14 @@ $(window).on('load',function(){
 		move_to_center();
 })
 $(window).on('resize',function(){
+	_is_mobile = $(window).width() < 768;
 	if(!_is_mobile){
 		refresh_layout();
 		delay = setTimeout(function(){
 			move_to_center();
 		},500)
+	} else {
+		reset_layout();
 	}
 })
 //$(window).trigger('resize');
