@@ -150,12 +150,12 @@ img {
 }
 
 /* line 172, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.clearfix:before, .clearfix:after {
+.clearfix:before, #solutions footer:before, #executive footer:before, .clearfix:after, #solutions footer:after, #executive footer:after {
   content: " ";
   display: table;
 }
 /* line 173, ../bower_components/foundation/scss/foundation/components/_global.scss */
-.clearfix:after {
+.clearfix:after, #solutions footer:after, #executive footer:after {
   clear: both;
 }
 
@@ -3385,8 +3385,10 @@ button:focus, a:focus {
  *    `:before` to contain the top-margins of child elements.
  */
 /* line 11, ../sass/helpers/classes/_clearfix.scss */
-.clearfix:before,
-.clearfix:after {
+.clearfix:before, #solutions footer:before, #executive footer:before,
+.clearfix:after,
+#solutions footer:after,
+#executive footer:after {
   content: " ";
   /* 1 */
   display: table;
@@ -3394,7 +3396,7 @@ button:focus, a:focus {
 }
 
 /* line 16, ../sass/helpers/classes/_clearfix.scss */
-.clearfix:after {
+.clearfix:after, #solutions footer:after, #executive footer:after {
   clear: both;
 }
 
@@ -3403,7 +3405,7 @@ button:focus, a:focus {
  * Include this rule to trigger hasLayout and contain floats.
  */
 /* line 23, ../sass/helpers/classes/_clearfix.scss */
-.clearfix {
+.clearfix, #solutions footer, #executive footer {
   *zoom: 1;
 }
 
@@ -3447,26 +3449,40 @@ body {
 /* line 1, ../sass/components/_header.scss */
 #header {
   background-color: white;
-  height: 120px;
+  height: 72px;
   display: block;
   position: fixed;
   z-index: 999;
   width: 100%;
   top: 0;
   left: 0;
-  padding: 26px 0;
+  padding: 16px 0;
   text-align: center;
 }
 
 /* line 13, ../sass/components/_header.scss */
 #home-link {
-  width: 296px;
-  height: 68px;
+  width: 178px;
+  height: 41px;
   background: url("../images/cranford-group.svg") left top no-repeat;
   background-size: 100% auto;
-  margin: 0 auto;
+  margin: 0;
 }
 
+@media only screen and (min-width: 48rem) {
+  /* line 25, ../sass/components/_header.scss */
+  #header {
+    height: 120px;
+    padding: 26px 0;
+  }
+
+  /* line 29, ../sass/components/_header.scss */
+  #home-link {
+    width: 296px;
+    height: 68px;
+    margin: 0 auto;
+  }
+}
 /* line 1, ../sass/components/_icons.scss */
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon';
@@ -3509,8 +3525,9 @@ body {
   -moz-opacity: 0.5;
   -khtml-opacity: 0.5;
   filter: alpha(opacity=50);
+  display: none;
 }
-/* line 31, ../sass/components/_icons.scss */
+/* line 32, ../sass/components/_icons.scss */
 .icon-arrow-up:hover, .icon-arrow-up:active, .icon-arrow-down:hover, .icon-arrow-down:active {
   opacity: 1;
   -moz-opacity: 1;
@@ -3518,23 +3535,23 @@ body {
   filter: alpha(opacity=100);
 }
 
-/* line 35, ../sass/components/_icons.scss */
+/* line 36, ../sass/components/_icons.scss */
 .icon-arrow-down {
   top: auto;
   bottom: 20px;
 }
 
-/* line 39, ../sass/components/_icons.scss */
+/* line 40, ../sass/components/_icons.scss */
 .icon-arrow-down:before {
   content: "\e600";
 }
 
-/* line 42, ../sass/components/_icons.scss */
+/* line 43, ../sass/components/_icons.scss */
 .icon-arrow-up:before {
   content: "\e601";
 }
 
-/* line 45, ../sass/components/_icons.scss */
+/* line 46, ../sass/components/_icons.scss */
 .icon-info-icon:before {
   content: "\e602";
   color: #afafaf;
@@ -3542,52 +3559,77 @@ body {
   font-size: 2.0625rem;
 }
 
-/* line 50, ../sass/components/_icons.scss */
+/* line 51, ../sass/components/_icons.scss */
 .icon-info-icon {
   top: 50%;
-  right: 40px;
+  right: 0.9375rem;
   bottom: auto;
   left: auto;
   position: absolute;
   margin-top: -16px;
   z-index: 999;
 }
-/* line 55, ../sass/components/_icons.scss */
+/* line 56, ../sass/components/_icons.scss */
 .icon-info-icon:hover:before, .icon-info-icon:active:before {
   color: #969696;
 }
 
-/* line 60, ../sass/components/_icons.scss */
+/* line 61, ../sass/components/_icons.scss */
 .icon-facebook:before {
   content: "\ea8c";
 }
 
-/* line 63, ../sass/components/_icons.scss */
+/* line 64, ../sass/components/_icons.scss */
 .icon-twitter:before {
   content: "\ea91";
 }
 
-/* line 66, ../sass/components/_icons.scss */
+/* line 67, ../sass/components/_icons.scss */
 .icon-linkedin2:before {
   content: "\eac9";
 }
 
+@media only screen and (min-width: 48rem) {
+  /* line 73, ../sass/components/_icons.scss */
+  .icon-arrow-up, .icon-arrow-down {
+    display: block;
+  }
+
+  /* line 76, ../sass/components/_icons.scss */
+  .icon-info-icon {
+    top: 50%;
+    right: 40px;
+    bottom: auto;
+    left: auto;
+    position: absolute;
+  }
+}
 /* line 1, ../sass/components/_container.scss */
 #main {
   width: 100%;
   height: 100%;
-  padding-top: 119px;
-  opacity: 0;
-  -moz-opacity: 0;
-  -khtml-opacity: 0;
-  filter: alpha(opacity=0);
+  padding-top: 72px;
+  opacity: 1;
+  -moz-opacity: 1;
+  -khtml-opacity: 1;
+  filter: alpha(opacity=100);
 }
 
+@media only screen and (min-width: 48rem) {
+  /* line 11, ../sass/components/_container.scss */
+  #main {
+    opacity: 0;
+    -moz-opacity: 0;
+    -khtml-opacity: 0;
+    filter: alpha(opacity=0);
+    padding-top: 119px;
+  }
+}
 /* line 1, ../sass/components/_typography.scss */
 h1, h2 {
   font-family: "proximanova-regular-webfont", sans-serif;
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 30px;
+  font-size: 1.875rem;
   margin: 0 0 30px;
   line-height: 100%;
   color: white;
@@ -3614,6 +3656,13 @@ strong {
   font-family: "proximanova-bold-webfont", sans-serif;
 }
 
+@media only screen and (min-width: 48rem) {
+  /* line 27, ../sass/components/_typography.scss */
+  h1, h2 {
+    font-size: 40px;
+    font-size: 2.5rem;
+  }
+}
 /* line 1, ../sass/components/_buttons.scss */
 a.button {
   display: inline-block;
@@ -3635,52 +3684,76 @@ a.button {
 #mask {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
-/* line 6, ../sass/templates/_home.scss */
+/* line 5, ../sass/templates/_home.scss */
 #solutions, #executive, #intro {
   z-index: 3;
-  position: absolute;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  left: 0;
+  position: relative;
   width: 100%;
   display: block;
 }
 
-/* line 15, ../sass/templates/_home.scss */
+/* line 12, ../sass/templates/_home.scss */
 #solutions footer, #executive footer {
   padding: 15px 0 0;
 }
-/* line 17, ../sass/templates/_home.scss */
+/* line 15, ../sass/templates/_home.scss */
 #solutions footer p, #executive footer p {
   margin-bottom: 40px;
 }
-/* line 19, ../sass/templates/_home.scss */
+/* line 17, ../sass/templates/_home.scss */
 #solutions footer p:last-child, #executive footer p:last-child {
   padding-bottom: 0;
 }
+/* line 20, ../sass/templates/_home.scss */
+#solutions footer p.button-wrap, #executive footer p.button-wrap {
+  float: left;
+}
 
-/* line 25, ../sass/templates/_home.scss */
+/* line 26, ../sass/templates/_home.scss */
 #intro {
   text-align: center;
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   line-height: 120%;
-  top: 0;
-  right: auto;
-  bottom: auto;
-  left: 0;
-  position: absolute;
+  color: #6b6b6b;
+  padding: 25px 0 0;
+  background-color: #f4f4f4;
 }
 
-/* line 31, ../sass/templates/_home.scss */
+/* line 39, ../sass/templates/_home.scss */
+.divide {
+  margin: 0 -0.9375rem 0;
+  display: block;
+  height: auto;
+}
+/* line 44, ../sass/templates/_home.scss */
+.divide img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 49, ../sass/templates/_home.scss */
+#solutions {
+  background-color: #b72d35;
+  padding: 20px 0 0;
+}
+
+/* line 53, ../sass/templates/_home.scss */
 #executive {
   text-align: right;
+  background-image: url("../images/executive-bg.jpg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 20px 0 0;
 }
 
+/* line 61, ../sass/templates/_home.scss */
+menu.social {
+  float: right;
+}
 /* line 2, ../sass/helpers/mixins/_inline-menu.scss */
 menu.social li, menu.social a {
   float: left;
@@ -3694,19 +3767,15 @@ menu.social li {
 menu.social li a {
   display: block;
 }
-/* line 36, ../sass/templates/_home.scss */
-#executive menu.social {
-  float: right;
-}
-/* line 39, ../sass/templates/_home.scss */
+/* line 64, ../sass/templates/_home.scss */
 menu.social li {
   padding: 0 10px 0 0;
 }
-/* line 41, ../sass/templates/_home.scss */
+/* line 66, ../sass/templates/_home.scss */
 #executive menu.social li {
   padding: 0 0 0 10px;
 }
-/* line 45, ../sass/templates/_home.scss */
+/* line 70, ../sass/templates/_home.scss */
 menu.social a {
   font-size: 25px;
   font-size: 1.5625rem;
@@ -3714,29 +3783,29 @@ menu.social a {
   -moz-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
-/* line 48, ../sass/templates/_home.scss */
+/* line 73, ../sass/templates/_home.scss */
 menu.social a:link, menu.social a:visited {
   color: #65191d;
 }
-/* line 50, ../sass/templates/_home.scss */
+/* line 75, ../sass/templates/_home.scss */
 #executive menu.social a:link, #executive menu.social a:visited {
   color: #0f2545;
 }
-/* line 54, ../sass/templates/_home.scss */
+/* line 79, ../sass/templates/_home.scss */
 menu.social a:hover, menu.social a:active {
   color: white;
 }
-/* line 56, ../sass/templates/_home.scss */
+/* line 81, ../sass/templates/_home.scss */
 #executive menu.social a:hover, #executive menu.social a:active {
   color: white;
 }
 
-/* line 63, ../sass/templates/_home.scss */
+/* line 91, ../sass/templates/_home.scss */
 .curve {
   position: absolute;
   left: 0;
   z-index: 1;
-  display: block;
+  display: none;
   -webkit-transition: all 0.1s ease;
   -moz-transition: all 0.1s ease;
   transition: all 0.1s ease;
@@ -3748,27 +3817,89 @@ menu.social a:hover, menu.social a:active {
   background-size: 100% auto;
   z-index: 2;
 }
-/* line 76, ../sass/templates/_home.scss */
+/* line 104, ../sass/templates/_home.scss */
 .curve.blue {
   background-image: url("../images/blue-curve.svg");
   z-index: 1;
 }
 
 /* Media Queries */
+@media only screen and (min-width: 48rem) {
+  /* line 127, ../sass/templates/_home.scss */
+  #mask {
+    overflow: hidden;
+  }
+
+  /* line 130, ../sass/templates/_home.scss */
+  #intro {
+    font-size: 40px;
+    font-size: 2.5rem;
+    background-color: transparent;
+    background-image: none;
+    color: white;
+    padding: 0;
+  }
+  /* line 136, ../sass/templates/_home.scss */
+  #intro footer {
+    display: none;
+  }
+
+  /* line 140, ../sass/templates/_home.scss */
+  .divide {
+    display: none;
+  }
+
+  /* line 143, ../sass/templates/_home.scss */
+  #solutions, #executive, #intro {
+    z-index: 3;
+    position: absolute;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    left: 0;
+    width: 100%;
+    display: block;
+  }
+
+  /* line 153, ../sass/templates/_home.scss */
+  #solutions footer img {
+    display: none;
+  }
+
+  /* line 158, ../sass/templates/_home.scss */
+  #executive {
+    background-image: none;
+    padding: 0;
+  }
+
+  /* line 162, ../sass/templates/_home.scss */
+  .curve {
+    display: block;
+  }
+
+  /* line 165, ../sass/templates/_home.scss */
+  menu.social {
+    float: left;
+  }
+  /* line 167, ../sass/templates/_home.scss */
+  #executive menu.social {
+    float: right;
+  }
+}
 @media only screen and (min-width: 64rem) {
-  /* line 105, ../sass/templates/_home.scss */
+  /* line 176, ../sass/templates/_home.scss */
   .curve {
     background-position: 0 -700px;
   }
 }
 @media only screen and (min-width: 87.5rem) {
-  /* line 114, ../sass/templates/_home.scss */
+  /* line 185, ../sass/templates/_home.scss */
   .curve {
     background-position: 0 -900px;
   }
 }
 @media only screen and (min-width: 120.0625rem) {
-  /* line 123, ../sass/templates/_home.scss */
+  /* line 194, ../sass/templates/_home.scss */
   .curve {
     background-position: 0 -1100px;
   }

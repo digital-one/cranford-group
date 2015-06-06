@@ -79,7 +79,8 @@ var _header_height,
 	_parallax_offset_blue = 0,
 	_window_scroll = $(window).scrollTop(),
 	_parallax_move = -(_window_scroll/2),
-	_parallax_move_blue = -(_window_scroll/1.2);
+	_parallax_move_blue = -(_window_scroll/1.2),
+	_is_mobile = $(window).width() < 768;
 
 
 $('.arrow').on('click',function(e){
@@ -88,6 +89,8 @@ $('.arrow').on('click',function(e){
 		_target = $(this).attr('href');
 		if(_target=="#solutions"){
 			_target=0;
+	}  else {
+		_target= _mask_height;
 	}
 		//_target = '0';
 	 $.scrollTo( _target, _animationSpeed, {
@@ -107,12 +110,12 @@ refresh_vars = function(){
 	_center = _mask_height/2,
 	_offset = (_window_height/100)*10,
 	_intro_height = $('#intro').outerHeight(),
-	_top= (_window_height/100)*15,
-	_bottom = (_window_height/100)*25,
+	_top= (_window_height/100)*10,
+	_bottom = (_window_height/100)*15,
 	_start_scroll = _window_height + _header_height,
 	_scroll_offset = _start_scroll/3,
 	_curve_red_pct_scale = (_window_width/382) * 100;
-	_curve_red_height = (592/100)* _curve_red_pct_scale,
+	_curve_red_height = (1000/100)* _curve_red_pct_scale,
 	_curve_red_top = (_window_height*2) - _curve_red_height,
 	_curve_blue_top = _window_height*2 +_offset,
 	_current_curve_width = $('.curve.red').width(),
@@ -135,6 +138,8 @@ refresh_vars = function(){
 	_parallax_move = -(_window_scroll/2),
 	_parallax_move_blue = -(_window_scroll/1.2),
 	_parallax_offset = 0;
+
+		if(_window_width < 1024) _curve_red_top -= 200;
 }
 
 parallax_curve = function(){
@@ -161,6 +166,7 @@ if(!isTouchDevice.any()){
 }
 
 refresh_layout = function(){
+	if(!_is_mobile){
 	refresh_vars();
 $('#mask').css({
 	height: _mask_height+'px'
@@ -182,6 +188,7 @@ $('.curve.red').css({
 $('.curve.blue').css({
 	'background-position': '0 '+ _curve_blue_top+'px'
 })
+}
 }
 
 
@@ -224,14 +231,17 @@ start_parallax();
 //start_parallax();
 
 $(window).on('load',function(){
+
 		refresh_layout();
 		move_to_center();
 })
 $(window).on('resize',function(){
+	if(!_is_mobile){
 		refresh_layout();
 		delay = setTimeout(function(){
 			move_to_center();
 		},500)
+	}
 })
 //$(window).trigger('resize');
 //refresh_vars();

@@ -28,6 +28,7 @@
 	background-color: transparent;
 	z-index: 9999;
 	@include opacity(.5);
+	display: none;
 	&:hover,&:active{
 		@include opacity(1);
 	}
@@ -48,7 +49,7 @@
 		@include font-size(33px);
 }
 .icon-info-icon{
-	@include abs-pos(50%,40px,auto,auto);
+	@include abs-pos(50%,0.9375rem,auto,auto);
 	margin-top:-16px;
 	z-index: 999;
 	&:hover,&:active{
@@ -66,3 +67,14 @@
 .icon-linkedin2:before {
 	content: "\eac9";
 }
+
+@media #{$medium-up} { 
+
+	.icon-arrow-up, .icon-arrow-down{
+		display:block;
+	}
+	.icon-info-icon{
+		@include abs-pos(50%,40px,auto,auto);
+	}
+}
+

@@ -1,41 +1,66 @@
 #mask{
 	position: relative;
 	width:100%;
-	overflow:hidden;
 }
 #solutions,#executive,#intro{
 	z-index: 3;
-	position:absolute;
-	@include transition(all .3s ease);
-	left:0;
+	position:relative;
 	width:100%;
 	display: block; 
 }
 #solutions,#executive{
 	footer{
+		@extend .clearfix;
 		padding: 15px 0 0;
 		p{
 			margin-bottom: 40px;
 			&:last-child{
 				padding-bottom:0;
 			}
+			&.button-wrap{
+				float:left;
+			}
 		}
 	}
 }
 #intro{
 	text-align:center;
-	@include font-size(40px);
+	@include font-size(20px);
 	line-height: 120%;
-	@include abs-pos(0,auto,auto,0);
+	color: #6b6b6b;
+	//padding: 25px 0 95px;
+	padding: 25px 0 0;
+	background-color: #f4f4f4;
+	//background-image:url('../images/intro-footer.jpg') ;
+	//background-position: center bottom;
+	//background-repeat: no-repeat;
+	//background-size:100% auto;
+}
+.divide{
+	margin: 0 -0.9375rem 0;
+	//width:100%;
+	display: block;
+	height: auto;
+	img{
+		width:100%;
+		height: auto;
+	}
+}
+#solutions{
+	background-color: $red;
+	padding: 20px 0 0;
 }
 #executive{
 	text-align:right;
+	background-image:url('../images/executive-bg.jpg');
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	padding: 20px 0 0;
 }
 menu.social{
 	@include inline-menu;
-	#executive &{
-		float: right;
-	}
+	float: right;
 	li{
 		padding: 0 10px 0 0;
 		#executive &{
@@ -60,11 +85,14 @@ menu.social{
 	}
 
 }
+.arrow{
+
+}
 .curve{
 	position:absolute;
 	left:0;
 	z-index:1;
-	display: block;
+	display: none;
 	@include transition(all .1s ease);
 	width:100%;
 	height:100%;
@@ -96,7 +124,50 @@ menu.social{
 
 @media #{$medium-up} { 
 
-	
+	#mask{
+		overflow:hidden;
+	}
+	#intro{
+		@include font-size(40px);
+		background-color: transparent;
+		background-image: none;
+		color: white;
+		padding:0;
+		footer{
+			display: none;
+		}
+	}
+	.divide{
+		display: none;
+	}
+	#solutions,#executive,#intro{
+		z-index: 3;
+		position:absolute;
+		@include transition(all .3s ease);
+		left:0;
+		width:100%;
+		display: block; 
+	}
+	#solutions{
+		footer{
+			img{
+				display: none;
+			}
+		}
+	}
+	#executive{
+		background-image: none;
+		padding:0;
+	}
+	.curve{
+		display: block;
+	}
+	menu.social{
+		float: left;
+		#executive &{
+			float: right;
+		}
+	}
 
 }
 

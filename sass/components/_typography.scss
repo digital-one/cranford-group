@@ -1,6 +1,6 @@
 h1,h2{
 	font-family: $proxima-nova;
-	@include font-size(40px);
+	@include font-size(30px);
 	margin: 0 0 30px;
 	line-height:100%;
 	color: white;
@@ -20,4 +20,13 @@ p{
 }
 strong{
 	font-family: $proxima-nova-bold;
+}
+
+@media #{$medium-up} { 
+
+h1,h2{
+	@include font-size(40px);
+
+}
+
 }
