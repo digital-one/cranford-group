@@ -148,11 +148,17 @@ menu.social{
 		width:100%;
 		display: block; 
 	}
-	#solutions{
+	#solutions,#executive{
 		footer{
 			img{
 				display: none;
 			}
+			p{
+				&.button-wrap{
+					float:none;
+				}
+			}
+			
 		}
 	}
 	#executive{
@@ -163,7 +169,7 @@ menu.social{
 		display: block;
 	}
 	menu.social{
-		float: left;
+		float: none;
 		#executive &{
 			float: right;
 		}

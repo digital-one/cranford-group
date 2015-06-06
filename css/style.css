@@ -3672,12 +3672,19 @@ a.button {
   text-align: center;
   color: #215199;
   padding: 0 40px;
+  -webkit-transition: background-color 0.3s ease;
+  -moz-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
   font-family: "proximanova-bold-webfont", sans-serif;
   border-radius: 22px/50%;
 }
-/* line 11, ../sass/components/_buttons.scss */
+/* line 12, ../sass/components/_buttons.scss */
 #solutions a.button {
   color: #b72d35;
+}
+/* line 15, ../sass/components/_buttons.scss */
+a.button:hover, a.button:active {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* line 1, ../sass/templates/_home.scss */
@@ -3862,44 +3869,48 @@ menu.social a:hover, menu.social a:active {
   }
 
   /* line 153, ../sass/templates/_home.scss */
-  #solutions footer img {
+  #solutions footer img, #executive footer img {
     display: none;
   }
+  /* line 157, ../sass/templates/_home.scss */
+  #solutions footer p.button-wrap, #executive footer p.button-wrap {
+    float: none;
+  }
 
-  /* line 158, ../sass/templates/_home.scss */
+  /* line 164, ../sass/templates/_home.scss */
   #executive {
     background-image: none;
     padding: 0;
   }
 
-  /* line 162, ../sass/templates/_home.scss */
+  /* line 168, ../sass/templates/_home.scss */
   .curve {
     display: block;
   }
 
-  /* line 165, ../sass/templates/_home.scss */
+  /* line 171, ../sass/templates/_home.scss */
   menu.social {
-    float: left;
+    float: none;
   }
-  /* line 167, ../sass/templates/_home.scss */
+  /* line 173, ../sass/templates/_home.scss */
   #executive menu.social {
     float: right;
   }
 }
 @media only screen and (min-width: 64rem) {
-  /* line 176, ../sass/templates/_home.scss */
+  /* line 182, ../sass/templates/_home.scss */
   .curve {
     background-position: 0 -700px;
   }
 }
 @media only screen and (min-width: 87.5rem) {
-  /* line 185, ../sass/templates/_home.scss */
+  /* line 191, ../sass/templates/_home.scss */
   .curve {
     background-position: 0 -900px;
   }
 }
 @media only screen and (min-width: 120.0625rem) {
-  /* line 194, ../sass/templates/_home.scss */
+  /* line 200, ../sass/templates/_home.scss */
   .curve {
     background-position: 0 -1100px;
   }
