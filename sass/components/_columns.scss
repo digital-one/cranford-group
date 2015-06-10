@@ -61,10 +61,19 @@
 	}
 	.xsmall-offset-1{
 		@include grid-column(
-	    $offset:1
+	   	 $offset:1
 	  );
 	}
-	
+	.xsmall-centered{
+		@include grid-column(
+	    	$center:true
+	  	);
+	}
+	.xsmall-offset-1{
+		@include grid-column(
+			$offset:1
+		);
+	}
 }
 
 @media #{$xlarge-only} { 

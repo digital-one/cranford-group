@@ -4,27 +4,32 @@
 }
 #contact{
 	position: fixed;
+	overflow-y:scroll;
 	top:0;
 	left:0;
 	width:100%;
 	height:100%;
+	display: none;
 	background-color: #f1f1f1;
 	background-image:url('../images/contact-bg.jpg');
 	background-position: left bottom;
 	background-repeat: no-repeat;
 	@include center-content-vertical('.center-vertical');
-	//padding-top:72px;
-	padding-top:120px;
+	padding-top:72px;
+	@include font-size(14px);
 	z-index: 996;
 	color: black;
 	p{
-		padding-left: 55px;
+		padding-left: 36px;
+		&.address{
+			display: none;
+		}
 	}
 	h2{
 		width:161px;
 		height: 35px;
 		@extend %ir;
-		background-image:url('../images/cranford-solutions.jpg');
+		background-image:url('../images/cranford-solutions.png');
 		background-position: left bottom;
 		background-repeat: no-repeat;
 		background-size: 100% auto;
@@ -41,6 +46,7 @@
 		}
 	}
 	.executive{
+		margin-top: 40px ;
 		a{
 			&:link,&:visited{
 				color: $blue;
@@ -50,10 +56,11 @@
 			}
 		}
 		h2{
-			background-image:url('../images/cranford-executive.jpg');
+			background-image:url('../images/cranford-executive.png');
 		}
 	}
 }
+
 #solutions,#executive,#intro{
 	z-index: 3;
 	position:relative;
@@ -113,6 +120,7 @@
 menu.social{
 	@include inline-menu;
 	float: right;
+	padding-top:5px;
 	li{
 		padding: 0 10px 0 0;
 		#executive &{
@@ -222,22 +230,38 @@ menu.social{
 	}
 	menu.social{
 		float: none;
+		padding-top:0;
 		#executive &{
 			float: right;
 		}
 	}
 
 }
-
 @media #{$small-up}{
 	#contact{
 		h2{
 			width:245px;
 			height: 53px;
 		}
+		p{
+			padding-left: 55px;
+		}
 	}
 }
-@media #{$medium-up} { 
+@media #{$medium-up} {
+
+	#contact{ 
+		@include font-size(16px);
+		padding-top:120px;
+		.executive{
+			margin:0;
+		}
+		p{
+			&.address{
+				display: block;
+			}
+		}
+	}
 
 }
 
@@ -255,8 +279,7 @@ menu.social{
 	.curve{
 		background-position:  0 -700px;
 	}
-	
-	
+
 }
 
 @media #{$xlarge-up} { 

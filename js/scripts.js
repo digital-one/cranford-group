@@ -83,6 +83,16 @@ var _header_height,
 	_is_mobile = $(window).width() < 768;
 
 
+$('.icon-info-icon').on('click',function(e){
+	e.preventDefault();
+	_contact = $('#contact');
+	if(_contact.hasClass('active')){
+		_contact.removeClass('active').fadeOut(100);
+	} else {
+		_contact.addClass('active').fadeIn(100);
+	}
+})
+
 $('.arrow').on('click',function(e){
 	e.preventDefault();
 	var _animationSpeed = 500,
