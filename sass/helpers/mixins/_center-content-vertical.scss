@@ -1,0 +1,14 @@
+@mixin center-content-vertical($target:'.center-vertical'){
+	//position:relative;
+	&:before{
+		content:"";
+		height:100%;
+		vertical-align: middle;
+		display: inline-block;
+	}
+	#{$target}{
+		display: inline-block;
+		width:98%;
+		vertical-align: middle;
+	}
+}

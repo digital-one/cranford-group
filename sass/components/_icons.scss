@@ -15,7 +15,7 @@
 		@include abs-pos(0,auto,auto,-500px);
 	}
 }
-.icon-arrow-up, .icon-arrow-down{
+.icon-angle-up, .icon-angle-down{
 	position: fixed;
 	top: 140px;
 	left: 50%;
@@ -28,23 +28,24 @@
 	background-color: transparent;
 	z-index: 9999;
 	@include opacity(.5);
+	@include font-size(40px);
 	display: none;
 	&:hover,&:active{
 		@include opacity(1);
 	}
 }
-.icon-arrow-down{
+.icon-angle-down{
 	top:auto;
 	bottom: 20px;
 }
-.icon-arrow-down:before {
-	content: "\e600";
+.icon-angle-up:before {
+	content: "\f106";
 }
-.icon-arrow-up:before {
-	content: "\e601";
+.icon-angle-down:before {
+	content: "\f107";
 }
 .icon-info-icon:before{
-	content: "\e602";
+	content: "\e600";
 	color:$light-grey;
 		@include font-size(33px);
 }
@@ -58,19 +59,27 @@
 		}
 	}
 }
-.icon-facebook:before {
-	content: "\ea8c";
+.icon-map-pin:before {
+	@include font-size(34px);
+	content: "\e601";
+
+}
+.icon-twitter, .icon-linkedin{
+
 }
 .icon-twitter:before {
-	content: "\ea91";
+	content: "\f099";
+	@include font-size(34px);
+	
 }
-.icon-linkedin2:before {
-	content: "\eac9";
+.icon-linkedin:before {
+	content: "\f0e1";
+	@include font-size(34px);
 }
 
 @media #{$medium-up} { 
 
-	.icon-arrow-up, .icon-arrow-down{
+	.icon-angle-up, .icon-angle-down{
 		display:block;
 	}
 	.icon-info-icon{

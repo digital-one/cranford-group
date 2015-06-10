@@ -5,7 +5,19 @@
 		[
 			[
 				"ba",
-				"background-color"
+				"background-image"
+			],
+			[
+				"trans",
+				"transparent"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"padd",
+				"padding-right"
 			],
 			[
 				"text",
@@ -14,10 +26,6 @@
 			[
 				"mar",
 				"margin-bottom"
-			],
-			[
-				"padd",
-				"padding-bottom"
 			],
 			[
 				"marg",
@@ -88,10 +96,6 @@
 				"margin-bottom"
 			],
 			[
-				"pad",
-				"padding-top"
-			],
-			[
 				"te",
 				"text-align"
 			],
@@ -118,10 +122,6 @@
 			[
 				"header",
 				"header-underline"
-			],
-			[
-				"trans",
-				"transition"
 			],
 			[
 				"bran",
@@ -519,6 +519,94 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "sass/components/_icons.scss",
+			"settings":
+			{
+				"buffer_size": 1389,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/components/_typography.scss",
+			"settings":
+			{
+				"buffer_size": 377,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_base.scss",
+			"settings":
+			{
+				"buffer_size": 167,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/components/_all.scss",
+			"settings":
+			{
+				"buffer_size": 359,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/components/_header.scss",
+			"settings":
+			{
+				"buffer_size": 479,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 4551,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/components/_container.scss",
+			"settings":
+			{
+				"buffer_size": 160,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/templates/_home.scss",
+			"settings":
+			{
+				"buffer_size": 2822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/templates/_all.scss",
+			"settings":
+			{
+				"buffer_size": 17,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_variables.scss",
+			"settings":
+			{
+				"buffer_size": 1591,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "sass/_settings.scss",
+			"settings":
+			{
+				"buffer_size": 1744,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -548,6 +636,10 @@
 	},
 	"file_history":
 	[
+		"/Applications/MAMP/htdocs/ama/cranford_group/sass/style.scss",
+		"/Applications/MAMP/htdocs/ama/cranford_group/sass/components/_buttons.scss",
+		"/Applications/MAMP/htdocs/ama/cranford_group/js/scripts.js",
+		"/Applications/MAMP/htdocs/ama/cranford_group/sass/_variables.scss",
 		"/Applications/MAMP/htdocs/prospect-health/grad-portal/wp-content/plugins/form-field-replacement/libraries/form-field-replacement.js",
 		"/Applications/MAMP/htdocs/prospect-health/grad-portal/wp-content/themes/grad-portal/includes/gravity-forms.php",
 		"/Applications/MAMP/htdocs/prospect-health/grad-portal/wp-content/themes/grad-portal/header.php",
@@ -671,11 +763,7 @@
 		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/template-faqs.php",
 		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/js/scripts.js",
 		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/scss/_settings.scss",
-		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/scss/components/_selectbox.scss",
-		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/scss/templates/_locations.scss",
-		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/scss/helpers/mixins/_bg-cover.scss",
-		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/js/jquery.gmap.js",
-		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/scss/templates/_contact.scss"
+		"/Applications/MAMP/htdocs/jump/epd/wp-content/themes/europlusdirect/scss/components/_selectbox.scss"
 	],
 	"find":
 	{
@@ -696,6 +784,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"current_curve_width",
+			"social",
+			"console.log",
+			"move_to_center",
 			"save_",
 			"ciet_cuisine",
 			"register_cpt_company",
@@ -819,11 +911,7 @@
 			"footer-logo",
 			"34px",
 			"centered-menu",
-			"border-radius",
-			"location-map",
-			"selectBox",
-			"refresh",
-			"disabled"
+			"border-radius"
 		],
 		"highlight": false,
 		"in_selection": false,
@@ -969,8 +1057,302 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "sass/components/_icons.scss",
+					"settings":
+					{
+						"buffer_size": 1389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1268,
+								1245
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "sass/components/_typography.scss",
+					"settings":
+					{
+						"buffer_size": 377,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								336,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "sass/_base.scss",
+					"settings":
+					{
+						"buffer_size": 167,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								164,
+								164
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "sass/components/_all.scss",
+					"settings":
+					{
+						"buffer_size": 359,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								83,
+								83
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "sass/components/_header.scss",
+					"settings":
+					{
+						"buffer_size": 479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								331,
+								331
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 4551,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1211,
+								1211
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 237.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "sass/components/_container.scss",
+					"settings":
+					{
+						"buffer_size": 160,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "sass/templates/_home.scss",
+					"settings":
+					{
+						"buffer_size": 2822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2397,
+								2397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1615.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "sass/templates/_all.scss",
+					"settings":
+					{
+						"buffer_size": 17,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								17
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "sass/_variables.scss",
+					"settings":
+					{
+						"buffer_size": 1591,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								62,
+								62
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "sass/_settings.scss",
+					"settings":
+					{
+						"buffer_size": 1744,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								78,
+								67
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
